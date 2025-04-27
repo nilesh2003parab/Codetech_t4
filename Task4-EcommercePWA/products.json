@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "price": "999",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Sneakers",
+      "price": "5000",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  

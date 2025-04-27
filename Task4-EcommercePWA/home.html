@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>PWA Shop</title>
+</head>
+<body>
+  <header>
+    
+    <header>
+        <h1>🛒 PWA E-Shop <span id="cart-count">(0)</span></h1>
+      </header>
+      <a href="cart.html" style="float:right; font-size: 0.9em; color: #317EFB;">View Cart</a>
+
+  </header>
+
+  <main id="product-list">
+    <!-- Products will be loaded here dynamically -->
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(() => {
+        console.log('Service Worker Registered');
+      });
+    }
+  </script>
+  <script>
+    // Request permission when the user opens the app
+    if ('Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        console.log('Notification permission:', permission);
+      });
+    }
+  </script>
+  
+  <script>window.location.href = "./home.html";</script>
+  
+</body>
+</html>
